@@ -1,8 +1,15 @@
 <template>
     <div>
-        INDEX <NuxtLink to="/about">ABOUT</NuxtLink>
+        INDEX <br>
+        <div style="padding: 12px 0;">
+            <NuxtLink to="/about">ABOUT</NuxtLink> | 
+            <NuxtLink to="/nostra">Nostra Map (nuxt link router)</NuxtLink> | 
+            <a href="/nostra">Nostra Map (href link)</a>
+        </div>
+
+        
+        <div ref="mapItem" class="map" id="mapTest" style=" width: 100%; height: 500px;"></div>
         <button @click="zoom = zoom+1,loadMap()">zoom</button>
-        <div ref="mapItem" class="map" id="mapTest" style=" width: 100%; height: 600px;"></div>
         
     </div>
 </template>
@@ -16,10 +23,7 @@
     const router = useRouter()
     const store = useAppStore();
 
-    // const options = {
-    //     url: 'https://js.arcgis.com/4.27/',
-    // };
-    // loadScript(options)
+
     const options = { version: '4.25', css: true };
     const mapItem = ref(null)
     console.log(mapItem.value);
@@ -49,10 +53,10 @@
     }
 
 
-      onMounted(()=>{
+    onMounted(()=>{
         console.log("AAAAA");
         loadMap()
-      })
+    })
 
 
 
