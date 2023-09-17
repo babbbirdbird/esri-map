@@ -2,8 +2,8 @@
     <div>
         ABOUT<br>
         <NuxtLink to="/">Index</NuxtLink> | 
-        <NuxtLink to="/nostra">Nostra Map</NuxtLink>
-        <a to="/nostra">Nostra Map (load page)</a>
+        <NuxtLink to="/nostra">Nostra Map (nuxt link router)</NuxtLink> | 
+        <a href="/nostra">Nostra Map (href link)</a>
     </div>
 </template>
 
